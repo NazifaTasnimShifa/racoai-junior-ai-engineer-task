@@ -51,6 +51,11 @@ For detailed analysis and sample outputs, see [METRICS_AND_RESPONSES.md](METRICS
 *   **Tracking:** SQLite Database (Custom `DatabaseManager` class)
 *   **Design:** OOP (Strategy Pattern for fine-tuning methods)
 
-## 👤 Author
+## � References
+*   **Original Dataset:** [Bengali Empathetic Conversations Corpus](https://www.kaggle.com/datasets/raseluddin/bengali-empathetic-conversations-corpus)
+*   **Kaggle Run (Proof):** [llama-finetuning-final](https://www.kaggle.com/code/nazifatasnimshifa/llama-finetuning-final)
+
+## �👤 Author
 **Nazifa Tasnim Shifa**
 *   Email: nazifatasnimshifa@gmail.com
+
