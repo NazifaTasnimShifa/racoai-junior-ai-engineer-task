@@ -14,10 +14,6 @@ The model was evaluated after fine-tuning on the Bengali Empathetic Conversation
 
 ## 2. Sample Model Responses
 
-============================================================
-SAMPLE MODEL RESPONSES (for human evaluation)
-============================================================
-
 Input: আমি খুব চিন্তিত বোধ করছি।
 Response: USER: আমি খুব চিন্তিত বোধ করছি।
 ASSISTANT: এটা সেই অনুভূতি, হয়তো পরের বার ভালো হবে
