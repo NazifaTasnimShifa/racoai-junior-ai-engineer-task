@@ -40,7 +40,7 @@ The goal was to implement a robust, Object-Oriented pipeline capable of running 
 
 *   **Training Loss:** `0.4453`
 *   **Perplexity:** `1.76`
-*   **Training Time:** ~1 hour (on T4 GPU)
+*   **Training Time:** ~10 hour (on T4 GPU)
 *   **Sequence Length:** 256 (Optimized for speed/coverage)
 
 For detailed analysis and sample outputs, see [METRICS_AND_RESPONSES.md](METRICS_AND_RESPONSES.md).
