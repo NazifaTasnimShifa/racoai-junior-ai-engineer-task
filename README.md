@@ -3,7 +3,7 @@
 ## Project Overview
 This repository contains the solution for the Junior AI Engineer task: fine-tuning **LLaMA 3.1-8B-Instruct** on the **Bengali Empathetic Conversations** dataset using **LoRA** (Low-Rank Adaptation).
 
-The goal was to implement a robust, Object-Oriented pipeline capable of running on a single T4 GPU within restricted time limits, complete with database logging and evaluation.
+The goal was to implement a robust, Object-Oriented pipeline capable of running on a single T4 GPU within restricted time limits, complete with database logging and evaluation. The pipeline is designed to support full-sequence training under higher-memory GPU environments, with the current configuration optimized for Kaggle T4 hardware constraints.
 
 ## 📂 Deliverables
 
@@ -41,9 +41,15 @@ The goal was to implement a robust, Object-Oriented pipeline capable of running 
 *   **Training Loss:** `0.4453`
 *   **Perplexity:** `1.76`
 *   **Training Time:** ~10 hour (on T4 GPU)
-*   **Sequence Length:** 256 (Optimized for speed/coverage)
+*   **Sequence Length:** 256 (data-driven compromise for T4 memory limits; full-sequence configuration supported with adjusted batch size and checkpointing)
 
 For detailed analysis and sample outputs, see [METRICS_AND_RESPONSES.md](METRICS_AND_RESPONSES.md).
+
+**Note on Sequence Length:**
+
+The original task specifies preserving full sequence length during tokenization. Due to Tesla T4 (16GB VRAM) constraints and the objective of completing a full training cycle within limited time, a data-driven sequence length of 256 was selected, covering approximately 84.2% of samples without truncation.
+
+In a production or multi-GPU environment, this pipeline supports full-sequence training by enabling gradient checkpointing, reducing batch size, and increasing gradient accumulation.
 
 ## 🛠 Tech Stack
 *   **Model:** LLaMA 3.1 8B Instruct (4-bit quantized)
